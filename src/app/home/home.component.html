@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-content>
+    <button mat-raised-button color="warn" *ngIf="!isAuthenticated"
+            (click)="oktaAuth.loginRedirect()">
+      Login
+    </button>
+    <button mat-raised-button color="warn" *ngIf="isAuthenticated"
+            [routerLink]="['/employee-list']">
+      Sugar Level List
+    </button>
+    <button mat-raised-button color="warn" *ngIf="isAuthenticated"
+            (click)="oktaAuth.logout()">
+      Login
+    </button>
+  </mat-card-content>
+</mat-card>
